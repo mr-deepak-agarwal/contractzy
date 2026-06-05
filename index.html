@@ -1,0 +1,1557 @@
+"<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Proposal — Contractzy.io</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #0f172a;
+            background: #ffffff;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: #0f172a;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-icon:hover {
+            transform: rotate(6deg);
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #0f172a;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            color: #64748b;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+        }
+
+        .btn-primary {
+            background: #0f172a;
+            color: white;
+            padding: 0.875rem 2rem;
+            border-radius: 9999px;
+            border: none;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #1e293b;
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 2rem 6rem;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(to bottom right, #f8fafc, #ffffff, #eff6ff);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 5rem;
+            right: 0;
+            width: 600px;
+            height: 600px;
+            background: rgba(59, 130, 246, 0.05);
+            border-radius: 50%;
+            filter: blur(80px);
+        }
+
+        .hero-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #0f172a;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 .text-red {
+            color: #dc2626;
+        }
+
+        .hero h1 .text-gradient {
+            background: linear-gradient(to right, #2563eb, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: #475569;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .hero p strong {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-large {
+            padding: 1.5rem 2.5rem;
+            font-size: 1.125rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-dark {
+            background: #0f172a;
+            color: white;
+            border: none;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-dark:hover {
+            background: #1e293b;
+            transform: scale(1.05);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #0f172a;
+            border: 2px solid #0f172a;
+        }
+
+        .btn-outline:hover {
+            background: #0f172a;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Dashboard Card */
+        .dashboard-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border: 1px solid #e2e8f0;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-header h3 {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .badge-critical {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .score-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .score-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #0f172a;
+        }
+
+        .score-number span {
+            font-size: 1.5rem;
+            color: #94a3b8;
+        }
+
+        .score-icon {
+            width: 96px;
+            height: 96px;
+            border: 8px solid #fecaca;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #dc2626;
+            font-size: 2.5rem;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .metric-box {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1rem;
+        }
+
+        .metric-label {
+            font-size: 0.75rem;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-value {
+            font-size: 1.875rem;
+            font-weight: 900;
+            color: #0f172a;
+        }
+
+        .metric-value.text-red {
+            color: #dc2626;
+        }
+
+        .metric-subtext {
+            font-size: 0.75rem;
+            color: #dc2626;
+            font-weight: 600;
+            margin-top: 0.25rem;
+        }
+
+        .metric-subtext-gray {
+            font-size: 0.75rem;
+            color: #64748b;
+            font-weight: 600;
+            margin-top: 0.25rem;
+        }
+
+        .separator {
+            height: 1px;
+            background: #e2e8f0;
+            margin: 1.5rem 0;
+        }
+
+        /* Dark Section */
+        .dark-section {
+            background: #0f172a;
+            color: white;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dark-section::before,
+        .dark-section::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.1;
+        }
+
+        .dark-section::before {
+            top: 5rem;
+            left: 5rem;
+            width: 384px;
+            height: 384px;
+            background: #3b82f6;
+        }
+
+        .dark-section::after {
+            bottom: 5rem;
+            right: 5rem;
+            width: 384px;
+            height: 384px;
+            background: #06b6d4;
+        }
+
+        .section-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 3.75rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-header p {
+            font-size: 1.5rem;
+            color: #cbd5e1;
+            font-weight: 300;
+            max-width: 768px;
+            margin: 0 auto;
+        }
+
+        .section-header p strong {
+            color: white;
+            font-weight: 700;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .card-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .glass-card:hover .card-icon {
+            transform: scale(1.1);
+        }
+
+        .icon-red {
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+        }
+
+        .icon-orange {
+            background: rgba(249, 115, 22, 0.2);
+            color: #fdba74;
+        }
+
+        .icon-yellow {
+            background: rgba(234, 179, 8, 0.2);
+            color: #fde047;
+        }
+
+        .glass-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .glass-card p {
+            font-size: 1.125rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        /* Light Section */
+        .light-section {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .light-section .section-header h2 {
+            color: #0f172a;
+        }
+
+        .light-section .section-header p {
+            color: #475569;
+        }
+
+        /* Findings Grid */
+        .findings-container {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .finding-row {
+            display: flex;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .finding-icon {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .finding-content {
+            flex: 1;
+        }
+
+        .finding-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .finding-header h3 {
+            font-size: 1.875rem;
+            font-weight: 900;
+            color: #0f172a;
+        }
+
+        .severity-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: white;
+        }
+
+        .severity-critical {
+            background: #dc2626;
+        }
+
+        .severity-high {
+            background: #ea580c;
+        }
+
+        .severity-medium {
+            background: #ca8a04;
+        }
+
+        .finding-description {
+            font-size: 1.25rem;
+            color: #475569;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        .issues-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .issue-card {
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .issue-card:hover {
+            border-color: #0f172a;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .issue-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .issue-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #0f172a;
+            flex: 1;
+        }
+
+        .impact-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border: 1px solid #e2e8f0;
+            margin-left: 1rem;
+        }
+
+        .issue-detail {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: #334155;
+            line-height: 1.5;
+        }
+
+        .solution-box {
+            background: linear-gradient(to right, #eff6ff, #ecfeff);
+            border-left: 4px solid #2563eb;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .solution-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .solution-text {
+            font-size: 0.875rem;
+            color: #1e40af;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        /* Competitor Section */
+        .gray-section {
+            padding: 6rem 2rem;
+            background: #f8fafc;
+        }
+
+        .competitor-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .competitor-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .competitor-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .competitor-card.you {
+            border: 4px solid #dc2626;
+            box-shadow: 0 25px 50px rgba(220, 38, 38, 0.2);
+        }
+
+        .you-badge {
+            background: #dc2626;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .competitor-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+        }
+
+        .competitor-metric {
+            margin-bottom: 1rem;
+        }
+
+        .competitor-metric-label {
+            font-size: 0.75rem;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .competitor-metric-value {
+            font-size: 2.5rem;
+            font-weight: 900;
+        }
+
+        .competitor-metric-value.red {
+            color: #dc2626;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #0f172a;
+            transition: width 0.5s ease;
+        }
+
+        .competitor-card.you .progress-fill {
+            background: #dc2626;
+        }
+
+        .competitor-metric-sub {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: #0f172a;
+        }
+
+        .competitor-metric-sub.red {
+            color: #dc2626;
+        }
+
+        /* Strategy Section */
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+        }
+
+        .strategy-card {
+            background: linear-gradient(to bottom right, white, #f8fafc);
+            border: none;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .strategy-card:hover {
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px);
+        }
+
+        .strategy-number {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: #0f172a;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .strategy-title {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+        }
+
+        .strategy-description {
+            font-size: 0.875rem;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        /* Results Section */
+        .results-section {
+            background: linear-gradient(to bottom right, #0f172a, #1e3a8a, #0f172a);
+            color: white;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .results-section::before,
+        .results-section::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.2;
+        }
+
+        .results-section::before {
+            top: 0;
+            left: 25%;
+            width: 384px;
+            height: 384px;
+            background: #3b82f6;
+        }
+
+        .results-section::after {
+            bottom: 0;
+            right: 25%;
+            width: 384px;
+            height: 384px;
+            background: #06b6d4;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        .result-item {
+            text-align: center;
+        }
+
+        .result-icon {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .result-number {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .result-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-subtitle {
+            font-size: 1.125rem;
+            color: #cbd5e1;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 8rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: #0f172a;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+
+        .cta-section h2 .text-red {
+            color: #dc2626;
+        }
+
+        .cta-section > p {
+            font-size: 1.5rem;
+            color: #475569;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-item h4 {
+            font-size: 0.875rem;
+            color: #64748b;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #64748b;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer p {
+            font-size: 0.875rem;
+        }
+
+        /* Icons (Using Unicode symbols as fallback) */
+        .icon {
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-content,
+            .cards-grid,
+            .competitor-grid,
+            .strategy-grid,
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .issues-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-icon">🔍</div>
+                <div class="logo-text">
+                    <h1>[Your Agency]</h1>
+                    <p>SEO EXPERTS</p>
+                </div>
+            </div>
+            <button class="btn-primary">Let's Talk →</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div>
+                <div class="badge">CONFIDENTIAL PROPOSAL</div>
+                <h1>
+                    Your SEO is<br>
+                    <span class="text-red">Broken.</span><br>
+                    <span class="text-gradient">We'll Fix It.</span>
+                </h1>
+                <p>
+                    A brutally honest audit of <strong>Contractzy.io</strong> revealing why you're invisible on Google—and exactly how to dominate your market.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-large btn-dark">View Full Audit →</button>
+                    <button class="btn-large btn-outline">Schedule Call</button>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>Current Status</h3>
+                    <span class="badge-critical">Critical</span>
+                </div>
+                <div class="score-section">
+                    <div>
+                        <p style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.5rem;">Overall SEO Score</p>
+                        <p class="score-number">29<span>/100</span></p>
+                    </div>
+                    <div class="score-icon">📉</div>
+                </div>
+                <div class="separator"></div>
+                <div class="metrics-grid">
+                    <div class="metric-box">
+                        <p class="metric-label">Domain Authority</p>
+                        <p class="metric-value">22</p>
+                        <p class="metric-subtext">vs. 68+ competitors</p>
+                    </div>
+                    <div class="metric-box">
+                        <p class="metric-label">Organic Traffic</p>
+                        <p class="metric-value">800</p>
+                        <p class="metric-subtext-gray">/month</p>
+                    </div>
+                    <div class="metric-box">
+                        <p class="metric-label">Core Rankings</p>
+                        <p class="metric-value text-red">0</p>
+                        <p class="metric-subtext-gray">Top 50 positions</p>
+                    </div>
+                    <div class="metric-box">
+                        <p class="metric-label">Backlinks</p>
+                        <p class="metric-value">340</p>
+                        <p class="metric-subtext-gray">total links</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Brutal Truth -->
+    <section class="dark-section">
+        <div class="section-content">
+            <div class="section-header">
+                <h2>The Brutal Truth</h2>
+                <p>
+                    You're losing thousands of qualified leads every month to competitors who simply <strong>show up on Google.</strong>
+                </p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="glass-card">
+                    <div class="card-icon icon-red">⚠️</div>
+                    <h3>Zero Visibility</h3>
+                    <p>
+                        You don't rank for a single commercial keyword. Not one. "Contract management software"? Invisible. "CLM tool"? Nowhere to be found.
+                    </p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon icon-orange">🛡️</div>
+                    <h3>Technical Disaster</h3>
+                    <p>
+                        Google can't even read your site properly. JavaScript rendering blocks crawling. Core Web Vitals failing. No schema markup.
+                    </p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon icon-yellow">📉</div>
+                    <h3>Authority Gap</h3>
+                    <p>
+                        DA 22 vs competitors at 44-68+. With only 340 backlinks, you're fighting with a plastic knife in a sword fight.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Actually Wrong -->
+    <section class="light-section">
+        <div class="section-content">
+            <div class="section-header">
+                <h2>What's Actually Wrong</h2>
+                <p>Every issue uncovered, every missed opportunity identified, every dollar left on the table.</p>
+            </div>
+
+            <div class="findings-container">
+                <!-- Technical SEO Failures -->
+                <div class="finding-row">
+                    <div class="finding-icon" style="background: #fee2e2;">
+                        <span class="icon">⚡</span>
+                    </div>
+                    <div class="finding-content">
+                        <div class="finding-header">
+                            <h3>Technical SEO Failures</h3>
+                            <span class="severity-badge severity-critical">CRITICAL</span>
+                        </div>
+                        <p class="finding-description">Critical technical issues preventing Google from properly crawling and indexing your site.</p>
+                        
+                        <div class="issues-grid">
+                            <div class="issue-card">
+                                <div class="issue-header">
+                                    <h4 class="issue-title">JavaScript Rendering Blocks Googlebot</h4>
+                                    <span class="impact-badge">Critical</span>
+                                </div>
+                                <div class="issue-detail">
+                                    Your Webflow site relies heavily on client-side rendering. Googlebot is struggling to execute JS and index dynamic content, meaning large portions of your site are invisible to search engines.
+                                </div>
+                                <div class="solution-box">
+                                    <p class="solution-label">Solution</p>
+                                    <p class="solution-text">Implement server-side rendering (SSR) or pre-rendering for critical pages. Ensure all important content is available in the initial HTML payload without JavaScript execution.</p>
+                                </div>
+                            </div>
+
+                            <div class="issue-card">
+                                <div class="issue-header">
+                                    <h4 class="issue-title">Core Web Vitals Failing (LCP 4.2s)</h4>
+                                    <span class="impact-badge">High</span>
+                                </div>
+                                <div class="issue-detail">
+                                    Largest Contentful Paint exceeds 4 seconds, far above Google's 2.5s threshold. Images are unoptimized, JavaScript is render-blocking, and CLS issues are degrading user experience.
+                                </div>
+                                <div class="solution-box">
+                                    <p class="solution-label">Solution</p>
+                                    <p class="solution-text">Compress images to WebP format, implement lazy loading, defer non-critical JavaScript, optimize font loading, and fix layout shifts. Target LCP under 2.1s.</p>
+                                </div>
+                            </div>
+
+                            <div class="issue-card">
+                                <div class="issue-header">
+                                    <h4 class="issue-title">Zero Schema Markup</h4>
+                                    <span class="impact-badge">High</span>
+                                </div>
+                                <div class="issue-detail">
+                                    No structured data whatsoever. Missing SoftwareApplication, FAQPage, BreadcrumbList, and Organization schemas. You're leaving rich snippets, star ratings, and enhanced SERP visibility on the table.
+                                </div>
+                                <div class="solution-box">
+                                    <p class="solution-label">Solution</p>
+                                    <p class="solution-text">Implement JSON-LD schema for all key page types. Priority: SoftwareApplication (with aggregateRating), FAQPage for solution pages, and BreadcrumbList for navigation.</p>
+                                </div>
+                            </div>
+
+                            <div class="issue-card">
+                                <div class="issue-header">
+                                    <h4 class="issue-title">Missing Review Schema (4.9★ Unused)</h4>
+                                    <span class="impact-badge">Medium</span>
+                                </div>
+                                <div class="issue-detail">
+                                    You have excellent 4.9-star reviews on Capterra and G2, but no review schema implemented. Star ratings could be appearing in search results but aren't.
+                                </div>
+                                <div class="solution-box">
+                                    <p class="solution-label">Solution</p>
+                                    <p class="solution-text">Add Review and AggregateRating schema to display star ratings in SERPs, dramatically improving click-through rates for branded and product searches.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <!-- Content & On-Page -->
+                <div class="finding-row">
+                    <div class="finding-icon" style="background: #fed7aa;">
+                        <span class="icon">📄</span>
+                    </div>
+                    <div class="finding-content">
+                        <div class="finding-header">
+                            <h3>Content & On-Page Deficiencies</h3>
+                            <span class="severity-badge severity-high">HIGH</span>
+                        </div>
+                        <p class="finding-description">Thin, generic content that fails to establish topical authority or target commercial keywords.</p>
+                        
+                        <div class="issues-grid">
+                            <div class="issue-card">
+                                <div class="issue-header">
+                                    <h4 class="issue-title">Thin Solution Pages (400 words avg)</h4>
+                                    <span class="impact-badge">High</span>
+                                </div>
+                                <div class="issue-detail">
+                                    Your solution pages average just 400 words—nowhere near sufficient to rank for competitive terms. Competitors have 2,000-3,000+ word pages with deep feature breakdowns, FAQs, and use cases.
+                                </div>
+                                <div class="solution-box">
+                                    <p class="solution-label">Solution</p>
+                                    <p class="solution-text">Expand each solution page to 1,500-2,500 words with comprehensive feature details, customer success stories, comparison tables, FAQs, and internal links to supporting content.</p>
+                                </div>
+                            </div>
+
+                            <div class="issue-card">
+                                <div class="issue-header">
+                                    <h4 class="issue-title">No Topical Architecture</h4>
+                                    <span class="impact-badge">High</span>
+                                </div>
+                                <div class="issue-detail">
+                                    Blog posts are disconnected and generic. No pillar-cluster model exists. You're not building topical authority around CLM, contract management, or legal tech—critical for competitive rankings.
+                                </div>
+                                <div class="solution-box">
+                                    <p class="solution-label">Solution</p>
+                                    <p class="solution-text">Build 5 comprehensive pillar pages (3,000+ words) targeting core CLM topics, each supported by 10+ cluster articles. Establish Contractzy as the definitive CLM knowledge hub.</p>
+                                </div>
+                            </div>
+
+                            <div class="issue-card">
+                                <div class="issue-header">
+                                    <h4 class="issue-title">Missing Comparison Pages</h4>
+                                    <span class="impact-badge">Medium</span>
+                                </div>
+                                <div class="issue-detail">
+                                    No "Contractzy vs Ironclad," "Contractzy vs SpotDraft," or other comparison pages. These high-intent pages are gold for capturing users in the consideration phase.
+                                </div>
+                                <div class="solution-box">
+                                    <p class="solution-label">Solution</p>
+                                    <p class="solution-text">Create detailed comparison pages for top 5 competitors. Include feature matrices, pricing comparisons, customer testimonial quotes, and unbiased analysis to build trust.</p>
+                                </div>
+                            </div>
+
+                            <div class="issue-card">
+                                <div class="issue-header">
+                                    <h4 class="issue-title">Generic Meta Descriptions</h4>
+                                    <span class="impact-badge">Medium</span>
+                                </div>
+                                <div class="issue-detail">
+                                    Meta descriptions are generic and fail to include compelling CTAs or unique value propositions. Low CTR from SERPs even when you do rank.
+                                </div>
+                                <div class="solution-box">
+                                    <p class="solution-label">Solution</p>
+                                    <p class="solution-text">Rewrite all meta descriptions to 150-155 characters with clear value props, target keywords, and action-oriented language. A/B test with GSC data to optimize CTR.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <!-- Backlink Profile -->
+                <div class="finding-row">
+                    <div class="finding-icon" style="background: #e9d5ff;">
+                        <span class="icon">🔗</span>
+                    </div>
+                    <div class="finding-content">
+                        <div class="finding-header">
+                            <h3>Backlink Profile & Authority</h3>
+                            <span class="severity-badge severity-high">HIGH</span>
+                        </div>
+                        <p class="finding-description">Severely weak domain authority preventing you from competing for any meaningful keywords.</p>
+                        
+                        <div class="issues-grid">
+                            <div class="issue-card">
+                                <div class="issue-header">
+                                    <h4 class="issue-title">Domain Authority 22 (vs 44-68+)</h4>
+                                    <span class="impact-badge">Critical</span>
+                                </div>
+                                <div class="issue-detail">
+                                    Your DA of 22 is catastrophically low. Ironclad sits at 68, Agiloft at 61, SpotDraft at 44. With only 340 backlinks vs their thousands, you can't rank for competitive terms.
+                                </div>
+                                <div class="solution-box">
+                                    <p class="solution-label">Solution</p>
+                                    <p class="solution-text">Execute aggressive link-building: guest posts on legal tech publications, HARO/media outreach, digital PR with original data reports, and strategic partnerships. Target DA 40+ in 12 months.</p>
+                                </div>
+                            </div>
+
+                            <div class="issue-card">
+                                <div class="issue-header">
+                                    <h4 class="issue-title">Low-Quality Backlink Profile</h4>
+                                    <span class="impact-badge">High</span>
+                                </div>
+                                <div class="issue-detail">
+                                    Many existing backlinks are from low-authority directories and aggregators. Few links from high-DA (50+) legal tech, SaaS, or business publications.
+                                </div>
+                                <div class="solution-box">
+                                    <p class="solution-label">Solution</p>
+                                    <p class="solution-text">Focus exclusively on earning backlinks from DA 50+ sites: Above the Law, Legal IT Insider, SaaStr, G2 Learning Hub, TechCrunch. Quality over quantity is critical here.</p>
+                                </div>
+                            </div>
+
+                            <div class="issue-card">
+                                <div class="issue-header">
+                                    <h4 class="issue-title">No Digital PR Strategy</h4>
+                                    <span class="impact-badge">Medium</span>
+                                </div>
+                                <div class="issue-detail">
+                                    Zero proactive outreach or thought leadership content being distributed. No HARO responses, no expert quotes, no industry report mentions.
+                                </div>
+                                <div class="solution-box">
+                                    <p class="solution-label">Solution</p>
+                                    <p class="solution-text">Respond to 3+ HARO queries per month, publish annual "State of CLM" report with data for journalists, pitch expert commentary to legal tech journalists for backlinks.</p>
+                                </div>
+                            </div>
+
+                            <div class="issue-card">
+                                <div class="issue-header">
+                                    <h4 class="issue-title">Underutilized Directory Presence</h4>
+                                    <span class="impact-badge">Low</span>
+                                </div>
+                                <div class="issue-detail">
+                                    Profiles exist on G2, Capterra, etc., but they're incomplete and not optimized for SEO value. Missing descriptions, features, and rich media.
+                                </div>
+                                <div class="solution-box">
+                                    <p class="solution-label">Solution</p>
+                                    <p class="solution-text">Optimize all SaaS directory profiles with complete descriptions, feature lists, screenshots, videos, and customer reviews. Ensure consistent NAP and branded keywords.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <!-- Mobile & Performance -->
+                <div class="finding-row">
+                    <div class="finding-icon" style="background: #fef3c7;">
+                        <span class="icon">📱</span>
+                    </div>
+                    <div class="finding-content">
+                        <div class="finding-header">
+                            <h3>Mobile & Performance</h3>
+                            <span class="severity-badge severity-high">HIGH</span>
+                        </div>
+                        <p class="finding-description">Mobile experience is degraded, impacting rankings and conversions from mobile search traffic.</p>
+                        
+                        <div class="issues-grid">
+                            <div class="issue-card">
+                                <div class="issue-header">
+                                    <h4 class="issue-title">Mobile PageSpeed Score: 31/100</h4>
+                                    <span class="impact-badge">High</span>
+                                </div>
+                                <div class="issue-detail">
+                                    Mobile performance is abysmal. With mobile-first indexing, this directly harms your rankings. Users are bouncing before pages even load.
+                                </div>
+                                <div class="solution-box">
+                                    <p class="solution-label">Solution</p>
+                                    <p class="solution-text">Implement mobile-specific optimizations: aggressive image compression, AMP for blog posts, reduce JavaScript execution time, eliminate render-blocking resources. Target 70+ mobile score.</p>
+                                </div>
+                            </div>
+
+                            <div class="issue-card">
+                                <div class="issue-header">
+                                    <h4 class="issue-title">Tap Targets Too Small</h4>
+                                    <span class="impact-badge">Medium</span>
+                                </div>
+                                <div class="issue-detail">
+                                    Many navigation links and CTA buttons are under 48x48px on mobile, failing Google's usability guidelines and frustrating users.
+                                </div>
+                                <div class="solution-box">
+                                    <p class="solution-label">Solution</p>
+                                    <p class="solution-text">Increase all clickable elements to minimum 48x48px on mobile. Add adequate padding (16px+) around buttons and links for comfortable touch interactions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitor Comparison -->
+    <section class="gray-section">
+        <div class="section-content">
+            <div class="section-header">
+                <h2>You vs. The Competition</h2>
+                <p>They're eating your lunch. Here's the data.</p>
+            </div>
+
+            <div class="competitor-grid">
+                <div class="competitor-card you">
+                    <span class="you-badge">YOU</span>
+                    <h3 class="competitor-name">Contractzy</h3>
+                    <div class="competitor-metric">
+                        <p class="competitor-metric-label">Domain Authority</p>
+                        <p class="competitor-metric-value red">22</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 22%"></div>
+                        </div>
+                    </div>
+                    <div class="competitor-metric">
+                        <p class="competitor-metric-label">Monthly Traffic</p>
+                        <p class="competitor-metric-sub red">800/mo</p>
+                    </div>
+                    <div class="competitor-metric">
+                        <p class="competitor-metric-label">Ranking Keywords</p>
+                        <p class="competitor-metric-sub red">180</p>
+                    </div>
+                </div>
+
+                <div class="competitor-card">
+                    <h3 class="competitor-name">Ironclad</h3>
+                    <div class="competitor-metric">
+                        <p class="competitor-metric-label">Domain Authority</p>
+                        <p class="competitor-metric-value">68</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 68%"></div>
+                        </div>
+                    </div>
+                    <div class="competitor-metric">
+                        <p class="competitor-metric-label">Monthly Traffic</p>
+                        <p class="competitor-metric-sub">180K/mo</p>
+                    </div>
+                    <div class="competitor-metric">
+                        <p class="competitor-metric-label">Ranking Keywords</p>
+                        <p class="competitor-metric-sub">5200</p>
+                    </div>
+                </div>
+
+                <div class="competitor-card">
+                    <h3 class="competitor-name">Agiloft</h3>
+                    <div class="competitor-metric">
+                        <p class="competitor-metric-label">Domain Authority</p>
+                        <p class="competitor-metric-value">61</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 61%"></div>
+                        </div>
+                    </div>
+                    <div class="competitor-metric">
+                        <p class="competitor-metric-label">Monthly Traffic</p>
+                        <p class="competitor-metric-sub">95K/mo</p>
+                    </div>
+                    <div class="competitor-metric">
+                        <p class="competitor-metric-label">Ranking Keywords</p>
+                        <p class="competitor-metric-sub">3800</p>
+                    </div>
+                </div>
+
+                <div class="competitor-card">
+                    <h3 class="competitor-name">SpotDraft</h3>
+                    <div class="competitor-metric">
+                        <p class="competitor-metric-label">Domain Authority</p>
+                        <p class="competitor-metric-value">44</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 44%"></div>
+                        </div>
+                    </div>
+                    <div class="competitor-metric">
+                        <p class="competitor-metric-label">Monthly Traffic</p>
+                        <p class="competitor-metric-sub">42K/mo</p>
+                    </div>
+                    <div class="competitor-metric">
+                        <p class="competitor-metric-label">Ranking Keywords</p>
+                        <p class="competitor-metric-sub">2100</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy -->
+    <section class="light-section">
+        <div class="section-content">
+            <div class="section-header">
+                <h2>How We'll Dominate</h2>
+                <p>A proven 5-pillar strategy to take you from invisible to inevitable.</p>
+            </div>
+
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <div class="strategy-number">1</div>
+                    <h3 class="strategy-title">Technical Foundation</h3>
+                    <p class="strategy-description">Fix JS rendering, Core Web Vitals, implement comprehensive schema markup, optimize site speed to sub-2s load times.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-number">2</div>
+                    <h3 class="strategy-title">Pillar Content</h3>
+                    <p class="strategy-description">Build 5 pillar pages with 50+ cluster articles establishing Contractzy as the CLM authority. 100K+ words of expert content.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-number">3</div>
+                    <h3 class="strategy-title">Link Building</h3>
+                    <p class="strategy-description">Acquire 200+ high-authority backlinks from DA 50+ sites. Guest posts, digital PR, HARO, expert commentary. Drive DA to 40+.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-number">4</div>
+                    <h3 class="strategy-title">Comparison SEO</h3>
+                    <p class="strategy-description">Create comparison pages for top 10 competitors. Capture high-intent "vs" searches driving qualified demo requests.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-number">5</div>
+                    <h3 class="strategy-title">Conversion CRO</h3>
+                    <p class="strategy-description">Optimize landing pages, A/B test CTAs, implement exit-intent pop-ups, create lead magnets. Convert traffic to pipeline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="results-section">
+        <div class="section-content">
+            <div class="section-header">
+                <h2>The Results You'll See</h2>
+                <p>Conservative projections. Real outcomes.</p>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-icon">📈</div>
+                    <p class="result-number">250%</p>
+                    <p class="result-title">Organic Traffic Growth</p>
+                    <p class="result-subtitle">Within 6 months</p>
+                </div>
+
+                <div class="result-item">
+                    <div class="result-icon">🎯</div>
+                    <p class="result-number">150+</p>
+                    <p class="result-title">First-Page Rankings</p>
+                    <p class="result-subtitle">High-intent keywords</p>
+                </div>
+
+                <div class="result-item">
+                    <div class="result-icon">⚡</div>
+                    <p class="result-number">2.1s</p>
+                    <p class="result-title">Page Load Time</p>
+                    <p class="result-subtitle">Core Web Vitals optimized</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="section-content">
+            <h2>
+                Ready to Stop<br>
+                Being <span class="text-red">Invisible?</span>
+            </h2>
+            <p>
+                Let's turn this audit into action. Book a strategy call and let's map out your path to market dominance.
+            </p>
+            <div class="cta-buttons">
+                <button class="btn-large btn-dark">Book Strategy Call →</button>
+                <button class="btn-large btn-outline">Download Report</button>
+            </div>
+            <div class="separator" style="max-width: 800px; margin: 4rem auto;"></div>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>Contact</h4>
+                    <p>contact@youragency.com</p>
+                </div>
+                <div class="contact-item">
+                    <h4>Phone</h4>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="contact-item">
+                    <h4>Website</h4>
+                    <p>www.youragency.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 [Your Agency Name]. Confidential Proposal for Contractzy.io</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Animate progress bars on scroll
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressFills = entry.target.querySelectorAll('.progress-fill');
+                    progressFills.forEach(fill => {
+                        fill.style.transition = 'width 1s ease-out';
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.competitor-grid').forEach(grid => {
+            observer.observe(grid);
+        });
+    </script>
+</body>
+</html>"
