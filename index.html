@@ -781,6 +781,55 @@
             line-height: 1.5;
         }
 
+
+        /* Engagement Section */
+        .engagement-section { background: #ffffff; padding: 6rem 2rem; }
+        .engagement-section .section-header h2 { color: #0f172a; }
+        .engagement-section .section-header p { color: #475569; }
+        .timeline { position: relative; margin-bottom: 5rem; }
+        .timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: #e2e8f0; transform: translateX(-50%); }
+        .timeline-item { display: grid; grid-template-columns: 1fr 60px 1fr; margin-bottom: 2.5rem; align-items: start; }
+        .timeline-content { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem 1.5rem; }
+        .timeline-item:nth-child(odd) .timeline-content { text-align: right; padding-right: 2rem; }
+        .timeline-item:nth-child(even) .timeline-content { grid-column: 3; text-align: left; padding-left: 2rem; }
+        .timeline-item:nth-child(even) .timeline-dot-col { order: 2; }
+        .timeline-item:nth-child(even) .timeline-empty { order: 1; }
+        .timeline-dot-col { display: flex; justify-content: center; padding-top: 0.25rem; }
+        .timeline-dot { width: 44px; height: 44px; border-radius: 50%; background: #0f172a; color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.875rem; position: relative; z-index: 1; flex-shrink: 0; }
+        .timeline-dot.blue { background: #2563eb; }
+        .timeline-dot.cyan { background: #0891b2; }
+        .timeline-dot.green { background: #16a34a; }
+        .timeline-month { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #2563eb; margin-bottom: 0.4rem; }
+        .timeline-title { font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 0.5rem; }
+        .timeline-items-list { list-style: none; padding: 0; margin: 0; }
+        .timeline-items-list li { font-size: 0.8rem; color: #475569; padding: 0.2rem 0; display: flex; align-items: flex-start; gap: 0.4rem; }
+        .timeline-item:nth-child(odd) .timeline-items-list li { flex-direction: row-reverse; }
+        .timeline-items-list li::before { content: '✓'; color: #16a34a; font-weight: 700; flex-shrink: 0; font-size: 0.75rem; margin-top: 1px; }
+        .eng-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem; }
+        .eng-card { border: 1px solid #e2e8f0; border-radius: 16px; padding: 2rem; background: #f8fafc; }
+        .eng-card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; }
+        .eng-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; }
+        .eng-icon.dark { background: #0f172a; }
+        .eng-icon.blue-bg { background: #dbeafe; }
+        .eng-card-title { font-size: 1.1rem; font-weight: 800; color: #0f172a; }
+        .eng-card-sub { font-size: 0.8rem; color: #64748b; font-weight: 500; }
+        .deliverable-row { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0; border-bottom: 1px solid #e2e8f0; font-size: 0.85rem; }
+        .deliverable-row:last-child { border-bottom: none; }
+        .deliverable-name { color: #334155; font-weight: 500; }
+        .deliverable-freq { background: #0f172a; color: white; padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.7rem; font-weight: 600; }
+        .deliverable-freq.blue-tag { background: #2563eb; }
+        .deliverable-freq.green-tag { background: #16a34a; }
+        .onboarding-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; }
+        .onboarding-step { padding: 1.75rem 1.5rem; border-right: 1px solid #e2e8f0; position: relative; background: white; }
+        .onboarding-step:last-child { border-right: none; }
+        .onboarding-step-num { font-size: 2.5rem; font-weight: 900; color: #e2e8f0; line-height: 1; margin-bottom: 0.75rem; }
+        .onboarding-step-title { font-size: 0.95rem; font-weight: 800; color: #0f172a; margin-bottom: 0.4rem; }
+        .onboarding-step-time { font-size: 0.7rem; font-weight: 700; color: #2563eb; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+        .onboarding-step-desc { font-size: 0.8rem; color: #64748b; line-height: 1.5; }
+        .onboarding-arrow { position: absolute; right: -12px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: #0f172a; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; z-index: 2; }
+        .onboarding-step:last-child .onboarding-arrow { display: none; }
+        .eng-subsection-title { font-size: 1.4rem; font-weight: 900; color: #0f172a; margin-bottom: 1.25rem; }
+
         /* Results Section */
         .results-section {
             background: linear-gradient(to bottom right, #0f172a, #1e3a8a, #0f172a);
@@ -1474,6 +1523,213 @@
                     <p class="strategy-description">Optimize landing pages, A/B test CTAs, implement exit-intent pop-ups, create lead magnets. Convert traffic to pipeline.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+
+    <!-- Engagement Plan -->
+    <section class="engagement-section">
+        <div class="section-content">
+            <div class="section-header">
+                <h2 style="color:#0f172a;">Your Roadmap to Dominance</h2>
+                <p style="color:#475569;">A clear timeline, monthly deliverables, and full transparency — you'll always know exactly what we're doing and why.</p>
+            </div>
+
+            <!-- Timeline -->
+            <h3 class="eng-subsection-title">6-Month Milestone Timeline</h3>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p class="timeline-month">Month 1</p>
+                        <p class="timeline-title">Technical Foundation</p>
+                        <ul class="timeline-items-list">
+                            <li>Full technical SEO audit & fixes</li>
+                            <li>Core Web Vitals optimisation</li>
+                            <li>Schema markup implementation</li>
+                            <li>Site speed to sub-2s</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-dot-col">
+                        <div class="timeline-dot">1</div>
+                    </div>
+                    <div class="timeline-empty"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-empty"></div>
+                    <div class="timeline-dot-col">
+                        <div class="timeline-dot blue">2</div>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="timeline-month">Month 2</p>
+                        <p class="timeline-title">Keyword & Content Strategy</p>
+                        <ul class="timeline-items-list">
+                            <li>500+ keyword opportunity map</li>
+                            <li>Pillar page architecture designed</li>
+                            <li>First 10 cluster articles published</li>
+                            <li>On-page optimisation of all existing pages</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p class="timeline-month">Month 3</p>
+                        <p class="timeline-title">Authority & Link Building</p>
+                        <ul class="timeline-items-list">
+                            <li>20+ DA 50+ backlinks acquired</li>
+                            <li>Competitor comparison pages live</li>
+                            <li>HARO & digital PR outreach begins</li>
+                            <li>First ranking movements visible</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-dot-col">
+                        <div class="timeline-dot cyan">3</div>
+                    </div>
+                    <div class="timeline-empty"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-empty"></div>
+                    <div class="timeline-dot-col">
+                        <div class="timeline-dot blue">4–5</div>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="timeline-month">Months 4–5</p>
+                        <p class="timeline-title">Scale & Compound Growth</p>
+                        <ul class="timeline-items-list">
+                            <li>40+ cluster articles total published</li>
+                            <li>60+ backlinks acquired cumulative</li>
+                            <li>CRO testing on landing pages</li>
+                            <li>Traffic up 100–150% from baseline</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p class="timeline-month">Month 6</p>
+                        <p class="timeline-title">Market Dominance</p>
+                        <ul class="timeline-items-list">
+                            <li>150+ first-page keyword rankings</li>
+                            <li>DA 35+ achieved</li>
+                            <li>250%+ traffic growth from baseline</li>
+                            <li>Full strategy review & next 6-month plan</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-dot-col">
+                        <div class="timeline-dot green">6</div>
+                    </div>
+                    <div class="timeline-empty"></div>
+                </div>
+
+            </div>
+
+            <!-- Deliverables & Reporting -->
+            <h3 class="eng-subsection-title">Monthly Deliverables & Reporting</h3>
+            <div class="eng-grid">
+                <div class="eng-card">
+                    <div class="eng-card-header">
+                        <div class="eng-icon dark">📦</div>
+                        <div>
+                            <p class="eng-card-title">What You Get Every Month</p>
+                            <p class="eng-card-sub">Concrete deliverables, no fluff</p>
+                        </div>
+                    </div>
+                    <div class="deliverable-row">
+                        <span class="deliverable-name">Technical fixes & improvements</span>
+                        <span class="deliverable-freq">Monthly</span>
+                    </div>
+                    <div class="deliverable-row">
+                        <span class="deliverable-name">New SEO-optimised blog articles</span>
+                        <span class="deliverable-freq blue-tag">8–10 / mo</span>
+                    </div>
+                    <div class="deliverable-row">
+                        <span class="deliverable-name">High-authority backlinks</span>
+                        <span class="deliverable-freq blue-tag">10–15 / mo</span>
+                    </div>
+                    <div class="deliverable-row">
+                        <span class="deliverable-name">On-page optimisation updates</span>
+                        <span class="deliverable-freq">Monthly</span>
+                    </div>
+                    <div class="deliverable-row">
+                        <span class="deliverable-name">Competitor & SERP monitoring</span>
+                        <span class="deliverable-freq">Weekly</span>
+                    </div>
+                    <div class="deliverable-row">
+                        <span class="deliverable-name">CRO recommendations</span>
+                        <span class="deliverable-freq">Monthly</span>
+                    </div>
+                </div>
+
+                <div class="eng-card">
+                    <div class="eng-card-header">
+                        <div class="eng-icon blue-bg">📊</div>
+                        <div>
+                            <p class="eng-card-title">How We Report Progress</p>
+                            <p class="eng-card-sub">Full transparency, always</p>
+                        </div>
+                    </div>
+                    <div class="deliverable-row">
+                        <span class="deliverable-name">Live dashboard (rankings, traffic, DA)</span>
+                        <span class="deliverable-freq green-tag">24/7 Access</span>
+                    </div>
+                    <div class="deliverable-row">
+                        <span class="deliverable-name">Monthly performance report</span>
+                        <span class="deliverable-freq">Monthly</span>
+                    </div>
+                    <div class="deliverable-row">
+                        <span class="deliverable-name">Strategy call & review</span>
+                        <span class="deliverable-freq">Monthly</span>
+                    </div>
+                    <div class="deliverable-row">
+                        <span class="deliverable-name">Keyword ranking updates</span>
+                        <span class="deliverable-freq">Weekly</span>
+                    </div>
+                    <div class="deliverable-row">
+                        <span class="deliverable-name">Slack / email access to your team</span>
+                        <span class="deliverable-freq green-tag">Always On</span>
+                    </div>
+                    <div class="deliverable-row">
+                        <span class="deliverable-name">Quarterly strategy deep-dive</span>
+                        <span class="deliverable-freq">Quarterly</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Onboarding -->
+            <h3 class="eng-subsection-title">How We Get Started</h3>
+            <div class="onboarding-grid">
+                <div class="onboarding-step">
+                    <div class="onboarding-arrow">→</div>
+                    <div class="onboarding-step-num">01</div>
+                    <p class="onboarding-step-time">Day 1</p>
+                    <p class="onboarding-step-title">Strategy Call</p>
+                    <p class="onboarding-step-desc">30-min kickoff call to align on goals, access requirements, and confirm priorities before we touch anything.</p>
+                </div>
+                <div class="onboarding-step">
+                    <div class="onboarding-arrow">→</div>
+                    <div class="onboarding-step-num">02</div>
+                    <p class="onboarding-step-time">Days 2–4</p>
+                    <p class="onboarding-step-title">Access & Setup</p>
+                    <p class="onboarding-step-desc">We request GSC, GA4, and CMS access. Live dashboard configured. Baseline metrics locked in.</p>
+                </div>
+                <div class="onboarding-step">
+                    <div class="onboarding-arrow">→</div>
+                    <div class="onboarding-step-num">03</div>
+                    <p class="onboarding-step-time">Days 5–10</p>
+                    <p class="onboarding-step-title">Deep Audit</p>
+                    <p class="onboarding-step-desc">Full technical crawl, content gap analysis, and backlink profile review. Priority fix list delivered.</p>
+                </div>
+                <div class="onboarding-step">
+                    <div class="onboarding-step-num">04</div>
+                    <p class="onboarding-step-time">Day 14</p>
+                    <p class="onboarding-step-title">Execution Begins</p>
+                    <p class="onboarding-step-desc">First technical fixes deployed. Content calendar approved. Link outreach launched. We're live.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
